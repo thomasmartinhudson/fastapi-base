@@ -8,13 +8,16 @@ version = "0.1.0"
 [tool.poetry.dependencies]
 fastapi = "^0.115.2"
 python = "^3.13"
+pydantic = "^2.9.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.10.0"
+colorama = "^0.4.6"
 isort = "^5.13.2"
 mypy = "^1.12.0"
 pylint = "^3.3.1"
 pytest = "^8.3.3"
+pylint-pydantic = "^0.3.2"
 
 [tool.black]
 line-length = 79
@@ -31,7 +34,7 @@ disable_error_code = "valid-type"
 ignore_missing_imports = true
 plugins = ["sqlmypy", "pydantic.mypy"]
 pretty = true
-python_version = "3.11"
+python_version = "3.13"
 show_column_numbers = true
 show_error_codes = true
 show_error_context = true
