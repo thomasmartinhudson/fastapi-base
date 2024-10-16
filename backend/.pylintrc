@@ -108,7 +108,6 @@ load-plugins=pylint.extensions.broad_try_clause,
             pylint.extensions.typing,
             pylint.extensions.while_used,
             pylint_pydantic,
-            linting.nineadmin_linting,
 
 # Pickle collected data for later comparisons.
 persistent=yes
@@ -467,7 +466,8 @@ disable=raw-checker-failed,
         use-implicit-booleaness-not-comparison-to-string,
         use-implicit-booleaness-not-comparison-to-zero,
         use-symbolic-message-instead,
-        missing-module-docstring
+        missing-module-docstring,
+        too-few-public-methods
 
 # Enable the message, report, category or checker with the given id(s). You can
 # either give multiple identifier separated by comma (,) or put this option

@@ -1,0 +1,38 @@
+services:
+  fastapi-backend:
+    container_name: fastapi-backend
+    image: fastapi-backend:latest
+    platform: linux/amd64
+    build:
+      context: ./
+      dockerfile: ./Dockerfile-backend-local
+      target: server-base
+    env_file:
+      - ./backend/dev.env
+    environment:
+      - FAST_API_ENV=development
+    volumes:
+      - ./backend/application:/application
+    ports:
+      - 8001:8001
+      - 5680:5680
+    command:
+      [
+        "python3",
+        "-m",
+        "debugpy",
+        "--listen",
+        "0.0.0.0:5680",
+        "-m",
+        "uvicorn",
+        "application.main:app",
+        "--host",
+        "0.0.0.0",
+        "--port",
+        "8001",
+        "--log-level",
+        "debug",
+        "--workers",
+        "3",
+        "--reload",
+      ]
