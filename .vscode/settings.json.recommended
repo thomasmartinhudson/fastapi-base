@@ -1,0 +1,105 @@
+{
+    // GLOBAL
+    "files.associations": {
+        "*.tfvars": "terraform-vars"
+    },
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ZainChen.json"
+    },
+    "git.pullTags": false,
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    // TOML
+    "[toml]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "be5invis.toml"
+    },
+    // TERRAFORM
+    "[terraform]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "hashicorp.terraform"
+    },
+    "[terraform-vars]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "hashicorp.terraform"
+    },
+    // FRONTEND
+    "[typescript]": {
+        "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+        "editor.formatOnSave": true
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": true
+    },
+    "eslint.workingDirectories": [
+        "backend",
+        "frontend"
+    ],
+    "typescript.tsdk": "./frontend/node_modules/typescript/lib",
+    "typescript.enablePromptUseWorkspaceTsdk": true,
+    // BACKEND
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": false,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "editor.rulers": [
+            72,
+            79
+        ],
+        "editor.semanticHighlighting.enabled": true,
+    },
+    "python.defaultInterpreterPath": "${workspaceFolder}/backend/.venv/bin/python",
+    "python.poetryPath": "${workspaceFolder}/backend/poetry",
+    "python.envFile": "${workspaceFolder}/backend/dev.env",
+    // Imports
+    "isort.args": [
+        "--settings-file",
+        "${workspaceFolder}/backend/pyproject.toml"
+    ],
+    // Formatting
+    "black-formatter.args": [
+        "--config",
+        "${workspaceFolder}/backend/pyproject.toml"
+    ],
+    "black-formatter.importStrategy": "fromEnvironment",
+    // Linting
+    "pylint.args": [
+        "--rcfile",
+        "backend/.pylintrc"
+    ],
+    "pylint.cwd": "${workspaceFolder}/backend",
+    "mypy-type-checker.args": [
+      "--config-file=${workspaceFolder}/backend/pyproject.toml"
+    ],
+    "python.languageServer": "Pylance",
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportGeneralTypeIssues": "none"
+    },
+    "python.analysis.importFormat": "absolute",
+    "python.analysis.indexing": true,
+    "python.terminal.activateEnvironment": false,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "vsintellicode.python.completionsEnabled": true,
+    "cSpell.enabled": false,
+    "autoDocstring.docstringFormat": "google",
+    // Type Checking
+    "python.analysis.typeCheckingMode": "basic",
+    // Testing
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.cwd": "${workspaceFolder}/backend",
+    "python.testing.pytestArgs": [
+        "-c",
+        "pytest-local.ini"
+    ]
+}

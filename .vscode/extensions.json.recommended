@@ -1,0 +1,24 @@
+{
+    "recommendations": [
+        "be5invis.toml",
+        "christian-kohler.path-intellisense",
+        "DavidAnson.vscode-markdownlint",
+        "eamodio.gitlens",
+        "malcolmmielle.semantic-highlighting",
+        "ms-azuretools.vscode-docker",
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.mypy-type-checker",
+        "ms-python.pylint",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "njpwerner.autodocstring",
+        "postman.postman-for-vscode",
+        "ryanluker.vscode-coverage-gutters",
+        "visualstudioexptteam.vscodeintellicode",
+        "ZainChen.json",
+        "hashicorp.terraform",
+        "rvest.vs-code-prettier-eslint",
+        "ms-vscode.makefile-tools",
+    ]
+}
